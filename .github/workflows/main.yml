@@ -3,7 +3,7 @@ name: Deploy GitHub Pages
 on:
   push:
     branches:
-      - main  # la branche que tu utilises
+      - main
 
 jobs:
   deploy:
@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v5
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .  # la racine du dépôt, là où est index.html
+          publish_dir: ./   # Publie tout le contenu à la racine
