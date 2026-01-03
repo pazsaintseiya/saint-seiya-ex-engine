@@ -10,8 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          persist-credentials: false  # IMPORTANT pour éviter l'erreur 128
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./   # Publie tout le contenu à la racine
+          publish_dir: ./   # racine du dépôt
+          force_orphan: true # Crée la branche gh-pages si elle n'existe pas
