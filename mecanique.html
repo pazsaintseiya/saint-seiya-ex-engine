@@ -13,9 +13,14 @@
         .box { background: #fff; padding: 15px; border-left: 5px solid #555; margin-bottom: 20px; }
         a { text-decoration: none; color: #1a73e8; }
         a:hover { text-decoration: underline; }
+        .btn { display: inline-block; background: #1a73e8; color: #fff; padding: 8px 12px; margin-bottom: 20px; border-radius: 4px; text-decoration: none; }
+        .btn:hover { background: #155ab6; }
     </style>
 </head>
 <body>
+
+<!-- Bouton retour à l'index -->
+<a class="btn" href="index.html">← Retour à l’accueil</a>
 
 <h1>Mécaniques du moteur – Saint Seiya EX</h1>
 
@@ -35,6 +40,44 @@
 
 <h2>2. Types de compétences</h2>
 <ul>
+    <li><strong>Attaque de base</strong> : génère des ressources pour compétences ultimes, inflige des dégâts standards.</li>
+    <li><strong>Compétences cycliques</strong> : déclenchées automatiquement après un cooldown, peuvent infliger dégâts, soins ou effets.</li>
+    <li><strong>Compétences passives</strong> : actives ou conditionnelles, modifient stats, triggers ou interactions avec d’autres compétences.</li>
+    <li><strong>Pouvoirs ultimes</strong> : consomment une ressource (Cosmos / Rage), souvent déterminants dans l’issue du combat.</li>
+</ul>
+
+<h2>3. Résolution des effets</h2>
+<ul>
+    <li>Les passifs et triggers sont évalués avant le calcul final des actions.</li>
+    <li>Les contrôles (stun, freeze, silence, provocation) ont priorité sur les dégâts bruts.</li>
+    <li>Les buffs et debuffs sont appliqués avant le calcul des valeurs finales.</li>
+    <li>Les interactions peuvent être cumulatives ou s’annuler selon les effets.</li>
+</ul>
+
+<h2>4. Ressources et timing</h2>
+<ul>
+    <li>Chaque attaque ou compétence génère ou consomme une ressource interne (Cosmos / Rage).</li>
+    <li>La vitesse de génération varie selon le personnage et les passifs.</li>
+    <li>Le timing des compétences ultimes est crucial pour maximiser l’impact PvP.</li>
+</ul>
+
+<h2>5. Interactions clés</h2>
+<ul>
+    <li>Synergies entre personnages : buffs, debuffs, déclencheurs combinés.</li>
+    <li>Compétences de contrôle peuvent interrompre ou retarder l’adversaire.</li>
+    <li>Les reliques et artefacts modifient le moteur en renforçant certaines actions ou en contrecarrant d’autres.</li>
+    <li>Certaines mécaniques sont spécifiques à des versions (CN / SEA / Global), attention aux variations.</li>
+</ul>
+
+<h2>6. Notes pour l'analyse</h2>
+<ul>
+    <li>Chaque personnage sera analysé dans ce contexte, avec ses compétences, passifs et ultimes.</li>
+    <li>Chaque relique sera étudiée pour comprendre ses interactions avec le moteur.</li>
+    <li>Cette page sert de <strong>référence constante</strong> pour éviter les interprétations subjectives.</li>
+</ul>
+
+</body>
+</html><ul>
     <li><strong>Attaque de base</strong> : génère des ressources pour compétences ultimes, inflige des dégâts standards.</li>
     <li><strong>Compétences cycliques</strong> : déclenchées automatiquement après un cooldown, peuvent infliger dégâts, soins ou effets.</li>
     <li><strong>Compétences passives</strong> : actives ou conditionnelles, modifient stats, triggers ou interactions avec d’autres compétences.</li>
