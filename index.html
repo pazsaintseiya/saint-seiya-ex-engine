@@ -125,19 +125,23 @@
 </table>
 
 <script>
-    // Script pour copier l'URL dans le presse-papiers
-    document.querySelectorAll('.copy-btn').forEach(button => {
-        button.addEventListener('click', () => {
-            const url = button.getAttribute('data-url');
-            navigator.clipboard.writeText(url).then(() => {
-                button.textContent = 'Copié !';
-                setTimeout(() => button.textContent = 'Copier', 1500);
-            }).catch(err => {
-                console.error('Erreur de copie:', err);
-            });
-        });
+    // Écouteur global pour tous les boutons .copy-btn (fonctionne pour toutes les sections, y compris reliques)
+    document.body.addEventListener('click', function(e) {
+        if (e.target.classList.contains('copy-btn')) {
+            const url = e.target.dataset.url;
+            navigator.clipboard.writeText(url)
+                .then(() => {
+                    e.target.textContent = 'Copié !';
+                    setTimeout(() => e.target.textContent = 'Copier', 1500);
+                })
+                .catch(err => {
+                    console.error('Erreur de copie:', err);
+                    alert('Impossible de copier l’URL.');
+                });
+        }
     });
 </script>
+
 
 <h2>3. Reliques</h2>
 
