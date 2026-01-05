@@ -19,99 +19,72 @@
 </head>
 <body>
 
-<!-- Bouton retour à l'index -->
 <a class="btn" href="index.html">← Retour à l’accueil</a>
 
 <h1>Mécaniques du moteur – Saint Seiya EX</h1>
 
 <div class="box">
     <p>
-        Cette page sert de référence centrale pour comprendre le fonctionnement du moteur de jeu.
-        Elle sera utilisée pour contextualiser l'analyse des personnages, reliques et pouvoirs ultimes.
+        Cette page définit les règles fondamentales du moteur de combat de Saint Seiya EX.
+        Elle constitue la base unique utilisée pour l’analyse des personnages, des synergies
+        et des tier lists PvP (mode automatique).
     </p>
 </div>
 
 <h2>1. Structure d'une équipe</h2>
 <ul>
-    <li>Une équipe typique comporte 5 personnages.</li>
-    <li>Chaque personnage peut occuper une position : avant, milieu ou arrière, influençant survie et soutien.</li>
-    <li>Les rôles principaux : DPS / Tank / Contrôle / Support.</li>
+    <li>Une équipe est composée de <strong>5 personnages</strong>.</li>
+    <li>Chaque personnage occupe une position : <strong>avant / milieu / arrière</strong>.</li>
+    <li>La position influence : survie, priorité de ciblage et exposition aux contrôles.</li>
+    <li>Rôles principaux : <strong>Tank, Support, DPS, Contrôle</strong>.</li>
 </ul>
 
 <h2>2. Types de compétences</h2>
 <ul>
-    <li><strong>Attaque de base</strong> : génère des ressources pour compétences ultimes, inflige des dégâts standards.</li>
-    <li><strong>Compétences cycliques</strong> : déclenchées automatiquement après un cooldown, peuvent infliger dégâts, soins ou effets.</li>
-    <li><strong>Compétences passives</strong> : actives ou conditionnelles, modifient stats, triggers ou interactions avec d’autres compétences.</li>
-    <li><strong>Pouvoirs ultimes</strong> : consomment une ressource (Cosmos / Rage), souvent déterminants dans l’issue du combat.</li>
+    <li><strong>Attaque de base</strong> : action automatique, génère des ressources (Cosmos / Rage).</li>
+    <li><strong>Compétences cycliques</strong> : déclenchées automatiquement après un cooldown.</li>
+    <li><strong>Compétences passives</strong> : effets permanents ou conditionnels.</li>
+    <li><strong>Pouvoirs ultimes</strong> : consomment une ressource, impact majeur sur l’issue du combat.</li>
 </ul>
 
-<h2>3. Résolution des effets</h2>
+<h2>3. Mode PvP automatique</h2>
 <ul>
-    <li>Les passifs et triggers sont évalués avant le calcul final des actions.</li>
-    <li>Les contrôles (stun, freeze, silence, provocation) ont priorité sur les dégâts bruts.</li>
-    <li>Les buffs et debuffs sont appliqués avant le calcul des valeurs finales.</li>
-    <li>Les interactions peuvent être cumulatives ou s’annuler selon les effets.</li>
+    <li>Les combats PvP sont <strong>entièrement automatisés</strong>.</li>
+    <li>Le joueur n’intervient pas sur le timing des compétences.</li>
+    <li>La valeur d’un personnage dépend fortement de la <strong>fiabilité de ses triggers</strong>.</li>
+    <li>Les contrôles et passifs ont plus d’importance que le burst isolé.</li>
 </ul>
 
-<h2>4. Ressources et timing</h2>
+<h2>4. Résolution des effets</h2>
 <ul>
-    <li>Chaque attaque ou compétence génère ou consomme une ressource interne (Cosmos / Rage).</li>
-    <li>La vitesse de génération varie selon le personnage et les passifs.</li>
-    <li>Le timing des compétences ultimes est crucial pour maximiser l’impact PvP.</li>
+    <li>Les passifs sont évalués avant les compétences actives.</li>
+    <li>Les effets de contrôle peuvent <strong>interrompre ou empêcher</strong> les compétences.</li>
+    <li>Les buffs et debuffs sont appliqués avant le calcul final des dégâts.</li>
+    <li>Certains effets peuvent se cumuler, d’autres se neutralisent.</li>
 </ul>
 
-<h2>5. Interactions clés</h2>
+<h2>5. Effets de contrôle et statuts</h2>
 <ul>
-    <li>Synergies entre personnages : buffs, debuffs, déclencheurs combinés.</li>
-    <li>Compétences de contrôle peuvent interrompre ou retarder l’adversaire.</li>
-    <li>Les reliques et artefacts modifient le moteur en renforçant certaines actions ou en contrecarrant d’autres.</li>
-    <li>Certaines mécaniques sont spécifiques à des versions (CN / SEA / Global), attention aux variations.</li>
+    <li><strong>Stun / Freeze</strong> : empêche toute action.</li>
+    <li><strong>Silence / Défaillance</strong> : empêche l’utilisation des ultimes et compétences cycliques.</li>
+    <li><strong>Renversement / Projection</strong> : interrompt les actions en cours.</li>
+    <li><strong>Immobilisation</strong> : empêche le déplacement mais pas toujours l’attaque.</li>
+    <li><strong>Banish / Interdimensionnel</strong> : retire temporairement une cible du combat.</li>
 </ul>
 
-<h2>6. Notes pour l'analyse</h2>
+<h2>6. Ressources et timing</h2>
 <ul>
-    <li>Chaque personnage sera analysé dans ce contexte, avec ses compétences, passifs et ultimes.</li>
-    <li>Chaque relique sera étudiée pour comprendre ses interactions avec le moteur.</li>
-    <li>Cette page sert de <strong>référence constante</strong> pour éviter les interprétations subjectives.</li>
+    <li>Les ressources sont générées principalement via attaques de base et passifs.</li>
+    <li>Un contrôle appliqué avant un ultime peut en retarder ou annuler l’exécution.</li>
+    <li>Le tempo global du combat est déterminant en PvP.</li>
 </ul>
 
-</body>
-</html><ul>
-    <li><strong>Attaque de base</strong> : génère des ressources pour compétences ultimes, inflige des dégâts standards.</li>
-    <li><strong>Compétences cycliques</strong> : déclenchées automatiquement après un cooldown, peuvent infliger dégâts, soins ou effets.</li>
-    <li><strong>Compétences passives</strong> : actives ou conditionnelles, modifient stats, triggers ou interactions avec d’autres compétences.</li>
-    <li><strong>Pouvoirs ultimes</strong> : consomment une ressource (Cosmos / Rage), souvent déterminants dans l’issue du combat.</li>
-</ul>
-
-<h2>3. Résolution des effets</h2>
+<h2>7. Notes pour l'analyse</h2>
 <ul>
-    <li>Les passifs et triggers sont évalués avant le calcul final des actions.</li>
-    <li>Les contrôles (stun, freeze, silence, provocation) ont priorité sur les dégâts bruts.</li>
-    <li>Les buffs et debuffs sont appliqués avant le calcul des valeurs finales.</li>
-    <li>Les interactions peuvent être cumulatives ou s’annuler selon les effets.</li>
-</ul>
-
-<h2>4. Ressources et timing</h2>
-<ul>
-    <li>Chaque attaque ou compétence génère ou consomme une ressource interne (Cosmos / Rage).</li>
-    <li>La vitesse de génération varie selon le personnage et les passifs.</li>
-    <li>Le timing des compétences ultimes est crucial pour maximiser l’impact PvP.</li>
-</ul>
-
-<h2>5. Interactions clés</h2>
-<ul>
-    <li>Synergies entre personnages : buffs, debuffs, déclencheurs combinés.</li>
-    <li>Compétences de contrôle peuvent interrompre ou retarder l’adversaire.</li>
-    <li>Les reliques et artefacts modifient le moteur en renforçant certaines actions ou en contrecarrant d’autres.</li>
-    <li>Certaines mécaniques sont spécifiques à des versions (CN / SEA / Global), attention aux variations.</li>
-</ul>
-
-<h2>6. Notes pour l'analyse</h2>
-<ul>
-    <li>Chaque personnage sera analysé dans ce contexte, avec ses compétences, passifs et ultimes.</li>
-    <li>Chaque relique sera étudiée pour comprendre ses interactions avec le moteur.</li>
-    <li>Cette page sert de **référence constante** pour éviter les interprétations subjectives.</li>
+    <li>Les personnages sont évalués <strong>dans ce cadre uniquement</strong>.</li>
+    <li>Aucune donnée externe n’est utilisée hors de cette base.</li>
+    <li>Les tier lists reflètent la performance en PvP automatique.</li>
+    <li>Les étoiles augmentent la <strong>fiabilité et la constance</strong> des mécaniques.</li>
 </ul>
 
 </body>
