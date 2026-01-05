@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Trident de Poséidon – Reliques</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; color: #222; margin: 0; padding: 20px; }
+        h1 { border-bottom: 3px solid #333; padding-bottom: 10px; }
+        h2 { margin-top: 30px; color: #444; }
+        table { border-collapse: collapse; width: 100%; background: #fff; margin-bottom: 30px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background-color: #eee; }
+        .box { background: #fff; padding: 15px; border-left: 5px solid #555; margin-bottom: 20px; }
+        button.copy-btn { padding: 4px 8px; cursor: pointer; background: #1a73e8; color: white; border: none; border-radius: 3px; }
+        button.copy-btn:hover { background: #155ab6; }
+    </style>
+</head>
+<body>
+
+<h1>Trident de Poséidon</h1>
+
+<div class="box">
+    <p>
+        Le Trident de Poséidon est le symbole de son autorité suprême sur les mers et l'une des reliques les plus puissantes.
+        Appartenant à Poséidon lui-même, tout ce que ses piques désignent n'a plus longtemps à vivre.
+    </p>
+    <p><strong>Faction :</strong> Atlantide</p>
+    <p><strong>Tags :</strong> Contrôle, Spécialité physique</p>
+    <p><strong>Restriction :</strong> Attaque physique</p>
+</div>
+
+<h2>Niveaux</h2>
+<table>
+    <thead>
+        <tr>
+            <th>★</th>
+            <th>Détails</th>
+            <th>Base Attributes</th>
+            <th>Upgrade</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Niveau ★1 -->
+        <tr>
+            <td>★1</td>
+            <td>En infligeant des dégâts d'attaque de base, 15% de chances d'invoquer une Matrice de foudre infligeant 40% ATQ +6000 à tous les ennemis et Étourdissant 2s (CD 25s).</td>
+            <td>ATQ +61, PV +350, DÉF-P +43, DÉF-M +43, PÉN-P +43, PÉN-M +43</td>
+            <td>Copies: 1, Gold: 12 000</td>
+        </tr>
+        <!-- Niveau ★2 -->
+        <tr>
+            <td>★2</td>
+            <td>DGT-P 60% ATQ +6000</td>
+            <td>ATQ +66, PV +375, DÉF-P +46, DÉF-M +46, PÉN-P +46, PÉN-M +46</td>
+            <td>Copies: 2, Gold: 40 000</td>
+        </tr>
+        <!-- Niveau ★3 -->
+        <tr>
+            <td>★3</td>
+            <td>DGT-P 80% ATQ +6000, chance foudre 5% étourdissement 1s</td>
+            <td>ATQ +70, PV +400, DÉF-P +49, DÉF-M +49, PÉN-P +49, PÉN-M +49</td>
+            <td>Copies: 3, Gold: 120 000</td>
+        </tr>
+        <!-- Niveau ★4 -->
+        <tr>
+            <td>★4</td>
+            <td>DGT-P 80% ATQ +6000</td>
+            <td>ATQ +79, PV +450, DÉF-P +55, DÉF-M +55, PÉN-P +55, PÉN-M +55</td>
+            <td>Copies: 4, Gold: 240 000</td>
+        </tr>
+        <!-- Niveau ★5 -->
+        <tr>
+            <td>★5</td>
+            <td>DGT-P 80% ATQ +6000, chance foudre 20%, chance Matrice supplémentaire</td>
+            <td>ATQ +88, PV +501, DÉF-P +62, DÉF-M +62, PÉN-P +62, PÉN-M +62</td>
+            <td>Upgrade Item: x2</td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    // Script pour copier l'URL dans le presse-papiers
+    document.querySelectorAll('.copy-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.getAttribute('data-url');
+            navigator.clipboard.writeText(url).then(() => {
+                button.textContent = 'Copié !';
+                setTimeout(() => button.textContent = 'Copier', 1500);
+            }).catch(err => console.error('Erreur de copie:', err));
+        });
+    });
+</script>
+
+</body>
+</html>
