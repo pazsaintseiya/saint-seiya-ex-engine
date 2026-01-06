@@ -2,234 +2,158 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Pouvoirs ultimes SSR</title>
+    <title>Pouvoirs ultimes SSR – Saint Seiya EX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
-        h1 { color: #1a237e; }
-        h2 { color: #283593; margin-top: 40px; }
-        h3 { color: #3949ab; margin-top: 25px; }
-        table { border-collapse: collapse; width: 100%; margin-bottom: 30px; }
-        table, th, td { border: 1px solid #333; }
-        th, td { padding: 8px; text-align: left; vertical-align: top; }
-        th { background-color: #c5cae9; }
-        .rarity { font-weight: bold; color: #d32f2f; }
-        .back-btn {
-            display: inline-block;
-            margin-bottom: 20px;
-            padding: 6px 12px;
-            background-color: #1a237e;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-        }
-        .back-btn:hover { background-color: #283593; }
+        body { font-family: Arial, sans-serif; background: #f4f4f4; color: #222; margin: 0; padding: 20px; }
+        h1 { border-bottom: 3px solid #333; padding-bottom: 10px; }
+        h2 { margin-top: 30px; color: #444; }
+        table { border-collapse: collapse; width: 100%; background: #fff; margin-bottom: 30px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; vertical-align: top; }
+        th { background-color: #eee; }
+        button.copy-btn { padding: 4px 8px; cursor: pointer; background: #1a73e8; color: white; border: none; border-radius: 3px; }
+        button.copy-btn:hover { background: #155ab6; }
+        .box { background: #fff; padding: 15px; border-left: 5px solid #555; margin-bottom: 20px; }
     </style>
 </head>
 <body>
 
-<a href="../index.html" class="back-btn">← Retour Accueil</a>
+<h1>Pouvoirs ultimes SSR – Saint Seiya EX</h1>
 
-<h1>Pouvoirs ultimes – SSR</h1>
-<p><strong>Qualité :</strong> <span class="rarity">SSR</span></p>
+<p>Cette page liste tous les pouvoirs ultimes SSR avec leur description complète et leur progression niveau par niveau.</p>
 
-<!-- HÉRITAGE D'EXCALIBUR -->
+<script>
+    document.body.addEventListener('click', function(e) {
+        if (e.target.classList.contains('copy-btn')) {
+            const url = e.target.dataset.url;
+            navigator.clipboard.writeText(url)
+                .then(() => {
+                    e.target.textContent = 'Copié !';
+                    setTimeout(() => e.target.textContent = 'Copier', 1500);
+                })
+                .catch(err => {
+                    console.error('Erreur de copie:', err);
+                    alert('Impossible de copier l’URL.');
+                });
+        }
+    });
+</script>
+
+<!-- Pouvoir 1 -->
 <h2>Héritage d'Excalibur</h2>
 <p>L'Excalibur tranchante héritée incarne non seulement la volonté de vaincre le mal, mais aussi le désir de protéger Athéna.</p>
+<p>Quality: SSR</p>
 <table>
-<thead>
-<tr>
-<th>★ Level</th>
-<th>Effect</th>
-<th>Copies Next LV</th>
-<th>Accumulated / Refund</th>
-<th>Cost</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>1</td><td>Taux de critique +4%, DGT critiques +8%</td><td>1</td><td>0</td><td>1 000</td></tr>
-<tr><td>2</td><td>Taux de critique +5%, DGT critiques +10%</td><td>1</td><td>1</td><td>2 000</td></tr>
-<tr><td>3</td><td>Taux de critique +6%, DGT critiques +12%</td><td>2</td><td>2</td><td>3 000</td></tr>
-<tr><td>4</td><td>Taux de critique +7%, DGT critiques +14%</td><td>2</td><td>4</td><td>4 000</td></tr>
-<tr><td>5</td><td>Taux de critique +8%, DGT critiques +16%</td><td>3</td><td>6</td><td>5 000</td></tr>
-<tr><td>6</td><td>Taux de critique +9%, DGT critiques +18%</td><td>3</td><td>9</td><td>6 000</td></tr>
-<tr><td>7</td><td>Taux de critique +10%, DGT critiques +20%</td><td>—</td><td>12</td><td>7 000</td></tr>
-</tbody>
+    <thead>
+        <tr>
+            <th>★ Level</th>
+            <th>Effect</th>
+            <th>Copies Next LV</th>
+            <th>Accumulated / Refund</th>
+            <th>Cost</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>1 ★</td><td>Taux de critique augmenté de 4%, les DGT critiques sont augmentés de 8%.</td><td>1</td><td>0</td><td>1 000</td></tr>
+        <tr><td>2 ★</td><td>Taux de critique augmenté de 5%, les DGT critiques sont augmentés de 10%.</td><td>1</td><td>1</td><td>2 000</td></tr>
+        <tr><td>3 ★</td><td>Taux de critique augmenté de 6%, les DGT critiques sont augmentés de 12%.</td><td>2</td><td>2</td><td>3 000</td></tr>
+        <tr><td>4 ★</td><td>Taux de critique augmenté de 7%, les DGT critiques sont augmentés de 14%.</td><td>2</td><td>4</td><td>4 000</td></tr>
+        <tr><td>5 ★</td><td>Taux de critique augmenté de 8%, les DGT critiques sont augmentés de 16%.</td><td>3</td><td>6</td><td>5 000</td></tr>
+        <tr><td>6 ★</td><td>Taux de critique augmenté de 9%, les DGT critiques sont augmentés de 18%.</td><td>3</td><td>9</td><td>6 000</td></tr>
+        <tr><td>7 ★</td><td>Taux de critique augmenté de 10%, les DGT critiques sont augmentés de 20%.</td><td>—</td><td>12</td><td>7 000</td></tr>
+    </tbody>
 </table>
 
-<!-- FORTERESSE MOBILE -->
+<!-- Pouvoir 2 -->
 <h2>Forteresse mobile</h2>
-<p>Son corps robuste forme un mur contre les ennemis, et son poing Iaido rapide comme l'éclair brise les envahisseurs.</p>
+<p>Son corps robuste forme un mur contre les ennemis, et son poing Iaido rapide comme l'éclair brise les envahisseurs. Comme une forteresse.</p>
+<p>Quality: SSR</p>
 <table>
-<thead>
-<tr>
-<th>★ Level</th>
-<th>Effect</th>
-<th>Copies Next LV</th>
-<th>Accumulated / Refund</th>
-<th>Awaken Item Cost</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>8</td><td>Piétinement : 7% PV max, stun 2s ou 1s 80%</td><td>3</td><td>15</td><td>2</td></tr>
-<tr><td>9</td><td>Piétinement : 7.5% PV max, stun 2s ou 1s 90%</td><td>4</td><td>19</td><td>3</td></tr>
-<tr><td>10</td><td>Piétinement : 8% PV max, stun 2s ou 1s 100%</td><td>4</td><td>23</td><td>3</td></tr>
-<tr><td>11</td><td>Piétinement : 8.5% PV max, stun 2s ou 1s 100%</td><td>4</td><td>27</td><td>4</td></tr>
-<tr><td>12</td><td>Piétinement : 9% PV max, stun 2s ou 1s 100%</td><td>5</td><td>32</td><td>4</td></tr>
-<tr><td>13</td><td>Piétinement : 9.5% PV max, stun 2s ou 1s 100%</td><td>5</td><td>37</td><td>5</td></tr>
-<tr><td>14</td><td>Piétinement : 10% PV max, stun 2s ou 1s 100%</td><td>6</td><td>43</td><td>5</td></tr>
-</tbody>
+    <thead>
+        <tr>
+            <th>★ Level</th>
+            <th>Effect</th>
+            <th>Copies Next LV</th>
+            <th>Accumulated / Refund</th>
+            <th>Awaken Item Cost</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>8 ★</td><td>Toutes les 15 secondes, effectue un Piétinement de guerre, et les ennemis subissent des dégâts équivalents à 7% des PV max du porteur de cette carte. Si ses PV max sont supérieurs à ceux de l'ennemi, celui-ci est Étourdi pendant 2 secondes. S'ils sont inférieurs ou égaux à ceux de l'ennemi, il y a 80% de chances de l'Étourdir pendant 1 secondes.</td><td>3</td><td>15</td><td>2</td></tr>
+        <tr><td>9 ★</td><td>Toutes les 15 secondes, effectue un Piétinement de guerre, et les ennemis subissent des dégâts équivalents à 7.5% des PV max du porteur de cette carte. Si ses PV max sont supérieurs à ceux de l'ennemi, celui-ci est Étourdi pendant 2 secondes. S'ils sont inférieurs ou égaux à ceux de l'ennemi, il y a 90% de chances de l'Étourdir pendant 1 secondes.</td><td>4</td><td>19</td><td>3</td></tr>
+        <tr><td>10 ★</td><td>Toutes les 15 secondes, effectue un Piétinement de guerre, et les ennemis subissent des dégâts équivalents à 8% des PV max du porteur de cette carte. Si ses PV max sont supérieurs à ceux de l'ennemi, celui-ci est Étourdi pendant 2 secondes. S'ils sont inférieurs ou égaux à ceux de l'ennemi, il y a 100% de chances de l'Étourdir pendant 1 secondes.</td><td>4</td><td>23</td><td>3</td></tr>
+        <tr><td>11 ★</td><td>Toutes les 15 secondes, effectue un Piétinement de guerre, et les ennemis subissent des dégâts équivalents à 8.5% des PV max du porteur de cette carte. Si ses PV max sont supérieurs à ceux de l'ennemi, celui-ci est Étourdi pendant 2 secondes. S'ils sont inférieurs ou égaux à ceux de l'ennemi, il y a 100% de chances de l'Étourdir pendant 1 secondes.</td><td>4</td><td>27</td><td>4</td></tr>
+        <tr><td>12 ★</td><td>Toutes les 15 secondes, effectue un Piétinement de guerre, et les ennemis subissent des dégâts équivalents à 9% des PV max du porteur de cette carte. Si ses PV max sont supérieurs à ceux de l'ennemi, celui-ci est Étourdi pendant 2 secondes. S'ils sont inférieurs ou égaux à ceux de l'ennemi, il y a 100% de chances de l'Étourdir pendant 1 secondes.</td><td>5</td><td>32</td><td>4</td></tr>
+        <tr><td>13 ★</td><td>Toutes les 15 secondes, effectue un Piétinement de guerre, et les ennemis subissent des dégâts équivalents à 9.5% des PV max du porteur de cette carte. Si ses PV max sont supérieurs à ceux de l'ennemi, celui-ci est Étourdi pendant 2 secondes. S'ils sont inférieurs ou égaux à ceux de l'ennemi, il y a 100% de chances de l'Étourdir pendant 1 secondes.</td><td>5</td><td>37</td><td>5</td></tr>
+        <tr><td>14 ★</td><td>Toutes les 15 secondes, effectue un Piétinement de guerre, et les ennemis subissent des dégâts équivalents à 10% des PV max du porteur de cette carte. Si ses PV max sont supérieurs à ceux de l'ennemi, celui-ci est Étourdi pendant 2 secondes. S'ils sont inférieurs ou égaux à ceux de l'ennemi, il y a 100% de chances de l'Étourdir pendant 1 secondes.</td><td>6</td><td>43</td><td>5</td></tr>
+    </tbody>
 </table>
 
-<!-- FRAPPE DE LA COMÈTE -->
+<!-- Pouvoir 3 -->
 <h2>Frappe de la comète</h2>
 <p>Les poings du Chevalier peuvent déchirer le ciel, et leurs coups de pied fendre la terre. Comme la comète qui inflige un puissant impact.</p>
+<p>Quality: SSR</p>
 <table>
-<thead>
-<tr>
-<th>★ Level</th>
-<th>Effect</th>
-<th>Copies Next LV</th>
-<th>Accumulated / Refund</th>
-<th>Awaken Item Cost</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>8</td><td>Comète 260% ATQ, étourdit 4s</td><td>3</td><td>15</td><td>2</td></tr>
-<tr><td>9</td><td>Comète 270% ATQ, étourdit 4s</td><td>4</td><td>19</td><td>3</td></tr>
-<tr><td>10</td><td>Comète 280% ATQ, étourdit 4s</td><td>4</td><td>23</td><td>3</td></tr>
-<tr><td>11</td><td>Comète 290% ATQ, étourdit 4s</td><td>4</td><td>27</td><td>4</td></tr>
-<tr><td>12</td><td>Comète 300% ATQ, étourdit 4s</td><td>5</td><td>32</td><td>4</td></tr>
-<tr><td>13</td><td>Comète 310% ATQ, étourdit 4s</td><td>5</td><td>37</td><td>5</td></tr>
-<tr><td>14</td><td>Comète 320% ATQ, étourdit 5s</td><td>6</td><td>43</td><td>5</td></tr>
-</tbody>
+    <thead>
+        <tr>
+            <th>★ Level</th>
+            <th>Effect</th>
+            <th>Copies Next LV</th>
+            <th>Accumulated / Refund</th>
+            <th>Awaken Item Cost</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>8 ★</td><td>20 secondes après le début du combat, lance une comète sur 1 ennemi aléatoire, qui explose à l'impact, infligeant des DGT physiques équivalents à 260% de l'ATQ du porteur aux ennemis dans le rayon de l'explosion, et les Étourdissant pendant 4 secondes.</td><td>3</td><td>15</td><td>2</td></tr>
+        <tr><td>9 ★</td><td>20 secondes après le début du combat, lance une comète sur 1 ennemi aléatoire, qui explose à l'impact, infligeant des DGT physiques équivalents à 270% de l'ATQ du porteur aux ennemis dans le rayon de l'explosion, et les Étourdissant pendant 4 secondes.</td><td>4</td><td>19</td><td>3</td></tr>
+        <tr><td>10 ★</td><td>20 secondes après le début du combat, lance une comète sur 1 ennemi aléatoire, qui explose à l'impact, infligeant des DGT physiques équivalents à 280% de l'ATQ du porteur aux ennemis dans le rayon de l'explosion, et les Étourdissant pendant 4 secondes.</td><td>4</td><td>23</td><td>3</td></tr>
+        <tr><td>11 ★</td><td>20 secondes après le début du combat, lance une comète sur 1 ennemi aléatoire, qui explose à l'impact, infligeant des DGT physiques équivalents à 290% de l'ATQ du porteur aux ennemis dans le rayon de l'explosion, et les Étourdissant pendant 4 secondes.</td><td>4</td><td>27</td><td>4</td></tr>
+        <tr><td>12 ★</td><td>20 secondes après le début du combat, lance une comète sur 1 ennemi aléatoire, qui explose à l'impact, infligeant des DGT physiques équivalents à 300% de l'ATQ du porteur aux ennemis dans le rayon de l'explosion, et les Étourdissant pendant 4 secondes.</td><td>5</td><td>32</td><td>4</td></tr>
+        <tr><td>13 ★</td><td>20 secondes après le début du combat, lance une comète sur 1 ennemi aléatoire, qui explose à l'impact, infligeant des DGT physiques équivalents à 310% de l'ATQ du porteur aux ennemis dans le rayon de l'explosion, et les Étourdissant pendant 4 secondes.</td><td>5</td><td>37</td><td>5</td></tr>
+        <tr><td>14 ★</td><td>20 secondes après le début du combat, lance une comète sur 1 ennemi aléatoire, qui explose à l'impact, infligeant des DGT physiques équivalents à 320% de l'ATQ du porteur aux ennemis dans le rayon de l'explosion, et les Étourdissant pendant 5 secondes.</td><td>6</td><td>43</td><td>5</td></tr>
+    </tbody>
 </table>
 
-<!-- PRATIQUE ASCÉTIQUE -->
+<!-- Pouvoir 4 -->
 <h2>Pratique ascétique</h2>
-<p>Les fleurs fleurissent puis se fanent. Les étoiles brillent puis s'éteignent.</p>
+<p>Les fleurs fleurissent puis se fanent. Les étoiles brillent puis s'éteignent. Le cosmos lui-même un jour se dissipera ; en comparaison, la vie humaine est insignifiante.</p>
+<p>Quality: SSR</p>
 <table>
-<thead>
-<tr>
-<th>★ Level</th>
-<th>Effect</th>
-<th>Copies Next LV</th>
-<th>Accumulated / Refund</th>
-<th>Awaken Item Cost</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>8</td><td>Stabilité 34s, DEF-P/DEF-M +12%</td><td>3</td><td>15</td><td>2</td></tr>
-<tr><td>9</td><td>Stabilité 35s, DEF-P/DEF-M +12.5%</td><td>4</td><td>19</td><td>3</td></tr>
-<tr><td>10</td><td>Stabilité 36s, DEF-P/DEF-M +13%</td><td>4</td><td>23</td><td>3</td></tr>
-<tr><td>11</td><td>Stabilité 37s, DEF-P/DEF-M +13.5%</td><td>4</td><td>27</td><td>4</td></tr>
-<tr><td>12</td><td>Stabilité 38s, DEF-P/DEF-M +14%</td><td>5</td><td>32</td><td>4</td></tr>
-<tr><td>13</td><td>Stabilité 39s, DEF-P/DEF-M +14.5%</td><td>5</td><td>37</td><td>5</td></tr>
-<tr><td>14</td><td>Stabilité 40s, DEF-P/DEF-M +15%</td><td>6</td><td>43</td><td>5</td></tr>
-</tbody>
+    <thead>
+        <tr>
+            <th>★ Level</th>
+            <th>Effect</th>
+            <th>Copies Next LV</th>
+            <th>Accumulated / Refund</th>
+            <th>Awaken Item Cost</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>8 ★</td><td>Le porteur gagne un effet de Stabilité pendant 34 secondes. Pendant la durée de l'effet de Stabilité, il gagne 12% de DÉF-P et DÉF-M supplémentaires.</td><td>3</td><td>15</td><td>2</td></tr>
+        <tr><td>9 ★</td><td>Le porteur gagne un effet de Stabilité pendant 35 secondes. Pendant la durée de l'effet de Stabilité, il gagne 12.5% de DÉF-P et DÉF-M supplémentaires.</td><td>4</td><td>19</td><td>3</td></tr>
+        <tr><td>10 ★</td><td>Le porteur gagne un effet de Stabilité pendant 36 secondes. Pendant la durée de l'effet de Stabilité, il gagne 13% de DÉF-P et DÉF-M supplémentaires.</td><td>4</td><td>23</td><td>3</td></tr>
+        <tr><td>11 ★</td><td>Le porteur gagne un effet de Stabilité pendant 37 secondes. Pendant la durée de l'effet de Stabilité, il gagne 13.5% de DÉF-P et DÉF-M supplémentaires.</td><td>4</td><td>27</td><td>4</td></tr>
+        <tr><td>12 ★</td><td>Le porteur gagne un effet de Stabilité pendant 38 secondes. Pendant la durée de l'effet de Stabilité, il gagne 14% de DÉF-P et DÉF-M supplémentaires.</td><td>5</td><td>32</td><td>4</td></tr>
+        <tr><td>13 ★</td><td>Le porteur gagne un effet de Stabilité pendant 39 secondes. Pendant la durée de l'effet de Stabilité, il gagne 14.5% de DÉF-P et DÉF-M supplémentaires.</td><td>5</td><td>37</td><td>5</td></tr>
+        <tr><td>14 ★</td><td>Le porteur gagne un effet de Stabilité pendant 40 secondes. Pendant la durée de l'effet de Stabilité, il gagne 15% de DÉF-P et DÉF-M supplémentaires.</td><td>6</td><td>43</td><td>5</td></tr>
+    </tbody>
 </table>
 
-<!-- ACALANATHA VIDYARAJA -->
+<!-- Pouvoir 5 -->
 <h2>Acalanatha Vidyaraja</h2>
 <p>Celui qui a réalisé cette vérité est inébranlable. En ouvrant les yeux, tous les maux qui affligent les êtres vivants seront expulsés.</p>
+<p>Quality: SSR</p>
 <table>
 <thead>
-<tr>
-<th>★ Level</th>
-<th>Effect</th>
-<th>Copies Next LV</th>
-<th>Accumulated / Refund</th>
-<th>Awaken Item Cost</th>
-</tr>
+<tr><th>★ Level</th><th>Effect</th><th>Copies Next LV</th><th>Accumulated / Refund</th><th>Awaken Item Cost</th></tr>
 </thead>
 <tbody>
-<tr><td>8</td><td>Bouclier +6s, valeur +27.5%</td><td>3</td><td>15</td><td>2</td></tr>
-<tr><td>9</td><td>Bouclier +6s, valeur +30%</td><td>4</td><td>19</td><td>3</td></tr>
-<tr><td>10</td><td>Bouclier +6s, valeur +32.5%</td><td>4</td><td>23</td><td>3</td></tr>
-<tr><td>11</td><td>Bouclier +7s, valeur +35%</td><td>4</td><td>27</td><td>4</td></tr>
-<tr><td>12</td><td>Bouclier +7s, valeur +37.5%</td><td>5</td><td>32</td><td>4</td></tr>
-<tr><td>13</td><td>Bouclier +7s, valeur +40%</td><td>5</td><td>37</td><td>5</td></tr>
-<tr><td>14</td><td>Bouclier +8s, valeur +42.5%</td><td>6</td><td>43</td><td>5</td></tr>
+<tr><td>8 ★</td><td>Lorsque le porteur obtient un bouclier, la durée du bouclier augmente de 6 et sa valeur augmente de 27.5%.</td><td>3</td><td>15</td><td>2</td></tr>
+<tr><td>9 ★</td><td>Lorsque le porteur obtient un bouclier, la durée du bouclier augmente de 6 et sa valeur augmente de 30%.</td><td>4</td><td>19</td><td>3</td></tr>
+<tr><td>10 ★</td><td>Lorsque le porteur obtient un bouclier, la durée du bouclier augmente de 6 et sa valeur augmente de 32.5%.</td><td>4</td><td>23</td><td>3</td></tr>
+<tr><td>11 ★</td><td>Lorsque le porteur obtient un bouclier, la durée du bouclier augmente de 7 et sa valeur augmente de 35%.</td><td>4</td><td>27</td><td>4</td></tr>
+<tr><td>12 ★</td><td>Lorsque le porteur obtient un bouclier, la durée du bouclier augmente de 7 et sa valeur augmente de 37.5%.</td><td>5</td><td>32</td><td>4</td></tr>
+<tr><td>13 ★</td><td>Lorsque le porteur obtient un bouclier, la durée du bouclier augmente de 7 et sa valeur augmente de 40%.</td><td>5</td><td>37</td><td>5</td></tr>
+<tr><td>14 ★</td><td>Lorsque le porteur obtient un bouclier, la durée du bouclier augmente de 8 et sa valeur augmente de 42.5%.</td><td>6</td><td>43</td><td>5</td></tr>
 </tbody>
 </table>
-
-<!-- GRFFE DU DRAGON -->
-<h2>Griffe du Dragon</h2>
-<p>Le dragon derrière lui symbolise son esprit combatif, avec les griffes de dragon marquant son cœur passionné et élevé.</p>
-<table>
-<thead>
-<tr>
-<th>★ Level</th>
-<th>Effect</th>
-<th>Copies Next LV</th>
-<th>Accumulated / Refund</th>
-<th>Awaken Item Cost</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>8</td><td>PV <30%, Dragon energy: renversement 1.5s, Super Armure +13.2% ATQ 8.5s</td><td>3</td><td>15</td><td>2</td></tr>
-<tr><td>9</td><td>14.4% ATQ 9s</td><td>4</td><td>19</td><td>3</td></tr>
-<tr><td>10</td><td>15.6% ATQ 9.5s</td><td>4</td><td>23</td><td>3</td></tr>
-<tr><td>11</td><td>16.8% ATQ 10s</td><td>4</td><td>27</td><td>4</td></tr>
-<tr><td>12</td><td>18% ATQ 10.5s</td><td>5</td><td>32</td><td>4</td></tr>
-<tr><td>13</td><td>19.2% ATQ 11s</td><td>5</td><td>37</td><td>5</td></tr>
-<tr><td>14</td><td>20.4% ATQ 11.5s</td><td>6</td><td>43</td><td>5</td></tr>
-</tbody>
-</table>
-
-<!-- PHÉNIX DE FEU -->
-<h2>Phénix de feu</h2>
-<p>Comme l'immortel Phénix, le Phénix de feu déploie ses ailes et s'envole.</p>
-<table>
-<thead>
-<tr>
-<th>★ Level</th>
-<th>Effect</th>
-<th>Copies Next LV</th>
-<th>Accumulated / Refund</th>
-<th>Awaken Item Cost</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>8</td><td>Colère du Phénix: DGT-M 20% ATQ + Brûlure 16.5% / 2.5s</td><td>3</td><td>15</td><td>2</td></tr>
-<tr><td>9</td><td>18% / 2.5s</td><td>4</td><td>19</td><td>3</td></tr>
-<tr><td>10</td><td>19.5% / 2.5s</td><td>4</td><td>23</td><td>3</td></tr>
-<tr><td>11</td><td>21% / 2.5s</td><td>4</td><td>27</td><td>4</td></tr>
-<tr><td>12</td><td>22.5% / 2.5s</td><td>5</td><td>32</td><td>4</td></tr>
-<tr><td>13</td><td>24% / 2.5s</td><td>5</td><td>37</td><td>5</td></tr>
-<tr><td>14</td><td>25.5% / 2.5s</td><td>6</td><td>43</td><td>5</td></tr>
-</tbody>
-</table>
-
-<!-- RAPIDE COMME L'ÉCLAIR -->
-<h2>Rapide comme l'éclair</h2>
-<p>Le Lion doré, prêt à l'action, libère des coups de poing foudroyants avec un cosmos rapide comme l'éclair.</p>
-<table>
-<thead>
-<tr>
-<th>★ Level</th>
-<th>Effect</th>
-<th>Copies Next LV</th>
-<th>Accumulated / Refund</th>
-<th>Awaken Item Cost</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>8</td><td>Dégâts compétences/ultimes/DoT -50%, Vitesse +37.5% 20s</td><td>3</td><td>15</td><td>2</td></tr>
-<tr><td>9</td><td>Vitesse +40%</td><td>4</td><td>19</td><td>3</td></tr>
-<tr><td>10</td><td>Vitesse +42.5%</td><td>4</td><td>23</td><td>3</td></tr>
-<tr><td>11</td><td>Vitesse +45%</td><td>4</td><td>27</td><td>4</td></tr>
-<tr><td>12</td><td>Vitesse +47.5%</td><td>5</td><td>32</td><td>4</td></tr>
-<tr><td>13</td><td>Vitesse +50%</td><td>5</td><td>37</td><td>5</td></tr>
-<tr><td>14</td><td>Vitesse +52.5%</td><td>6</td><td>43</td><td>5</td></tr>
-</tbody>
-</table>
-
-<!-- ÉCLAT DÉSESPÉRÉ -->
-<h2>Éclat désespéré</h2>
-<p>Plus la situation est désespérée, plus le cosmos brûle intensément.</p>
-<table>
-<thead>
-<tr>
-<th>★ Level</th>
-<th>Effect</th>
-<th>
