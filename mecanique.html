@@ -26,65 +26,129 @@
 <div class="box">
     <p>
         Cette page définit les règles fondamentales du moteur de combat de Saint Seiya EX.
-        Elle constitue la base unique utilisée pour l’analyse des personnages, des synergies
-        et des tier lists PvP (mode automatique).
+        Elle constitue la référence unique utilisée pour l’analyse des personnages,
+        des synergies et des tier lists en PvP automatique.
     </p>
 </div>
 
 <h2>1. Structure d'une équipe</h2>
 <ul>
-    <li>Une équipe est composée de <strong>5 personnages</strong>.</li>
+    <li>Une équipe est composée de <strong>5 personnages actifs</strong>.</li>
     <li>Chaque personnage occupe une position : <strong>avant / milieu / arrière</strong>.</li>
-    <li>La position influence : survie, priorité de ciblage et exposition aux contrôles.</li>
-    <li>Rôles principaux : <strong>Tank, Support, DPS, Contrôle</strong>.</li>
+    <li>La position influence :
+        <ul>
+            <li>la probabilité d’être ciblé par l’IA,</li>
+            <li>l’exposition aux contrôles de zone,</li>
+            <li>la survivabilité globale.</li>
+        </ul>
+    </li>
+    <li>Rôles fonctionnels : <strong>Tank, DPS, Support, Contrôle</strong>.</li>
 </ul>
 
-<h2>2. Types de compétences</h2>
+<h2>2. Comportement de l’IA et ciblage</h2>
 <ul>
-    <li><strong>Attaque de base</strong> : action automatique, génère des ressources (Cosmos / Rage).</li>
-    <li><strong>Compétences cycliques</strong> : déclenchées automatiquement après un cooldown.</li>
-    <li><strong>Compétences passives</strong> : effets permanents ou conditionnels.</li>
-    <li><strong>Pouvoirs ultimes</strong> : consomment une ressource, impact majeur sur l’issue du combat.</li>
+    <li>L’IA sélectionne les cibles selon :
+        <ul>
+            <li>la position (avant prioritaire),</li>
+            <li>l’état (vivant, banni, contrôlé),</li>
+            <li>des règles propres à chaque compétence.</li>
+        </ul>
+    </li>
+    <li>Les compétences automatiques ne s’adaptent pas au contexte tactique.</li>
+    <li>La fiabilité d’un personnage dépend de la <strong>prévisibilité de son IA</strong>.</li>
 </ul>
 
-<h2>3. Mode PvP automatique</h2>
+<h2>3. Types de compétences</h2>
 <ul>
-    <li>Les combats PvP sont <strong>entièrement automatisés</strong>.</li>
-    <li>Le joueur n’intervient pas sur le timing des compétences.</li>
-    <li>La valeur d’un personnage dépend fortement de la <strong>fiabilité de ses triggers</strong>.</li>
-    <li>Les contrôles et passifs ont plus d’importance que le burst isolé.</li>
+    <li><strong>Attaque de base</strong> : action automatique, génère des ressources.</li>
+    <li><strong>Compétences cycliques</strong> : s’activent automatiquement après un cooldown fixe.</li>
+    <li><strong>Compétences passives</strong> :
+        <ul>
+            <li>toujours actives ou conditionnelles,</li>
+            <li>peuvent modifier le moteur (statuts, priorités, déclenchements).</li>
+        </ul>
+    </li>
+    <li><strong>Pouvoirs ultimes</strong> :
+        <ul>
+            <li>nécessitent une ressource pleine,</li>
+            <li>peuvent être annulés ou retardés par un contrôle.</li>
+        </ul>
+    </li>
 </ul>
 
-<h2>4. Résolution des effets</h2>
+<h2>4. Ressources et génération</h2>
 <ul>
-    <li>Les passifs sont évalués avant les compétences actives.</li>
-    <li>Les effets de contrôle peuvent <strong>interrompre ou empêcher</strong> les compétences.</li>
-    <li>Les buffs et debuffs sont appliqués avant le calcul final des dégâts.</li>
-    <li>Certains effets peuvent se cumuler, d’autres se neutralisent.</li>
+    <li>Les ressources (Cosmos / Rage) sont générées par :
+        <ul>
+            <li>attaques de base,</li>
+            <li>dégâts infligés,</li>
+            <li>dégâts subis,</li>
+            <li>certains passifs spécifiques.</li>
+        </ul>
+    </li>
+    <li>La vitesse de génération conditionne le <strong>rythme des ultimes</strong>.</li>
 </ul>
 
-<h2>5. Effets de contrôle et statuts</h2>
+<h2>5. Mode PvP automatique</h2>
 <ul>
-    <li><strong>Stun / Freeze</strong> : empêche toute action.</li>
-    <li><strong>Silence / Défaillance</strong> : empêche l’utilisation des ultimes et compétences cycliques.</li>
-    <li><strong>Renversement / Projection</strong> : interrompt les actions en cours.</li>
-    <li><strong>Immobilisation</strong> : empêche le déplacement mais pas toujours l’attaque.</li>
-    <li><strong>Banish / Interdimensionnel</strong> : retire temporairement une cible du combat.</li>
+    <li>Les combats PvP standards sont <strong>entièrement automatisés</strong>.</li>
+    <li>Aucun contrôle manuel du timing n’est possible.</li>
+    <li>La valeur d’un personnage repose sur :
+        <ul>
+            <li>la constance de ses triggers,</li>
+            <li>sa résistance aux contrôles,</li>
+            <li>l’impact passif sur le combat.</li>
+        </ul>
+    </li>
 </ul>
 
-<h2>6. Ressources et timing</h2>
+<h2>6. Résolution des effets</h2>
 <ul>
-    <li>Les ressources sont générées principalement via attaques de base et passifs.</li>
-    <li>Un contrôle appliqué avant un ultime peut en retarder ou annuler l’exécution.</li>
-    <li>Le tempo global du combat est déterminant en PvP.</li>
+    <li>Ordre général :
+        <ol>
+            <li>vérification des passifs,</li>
+            <li>application des contrôles,</li>
+            <li>calcul des buffs/debuffs,</li>
+            <li>résolution des dégâts.</li>
+        </ol>
+    </li>
+    <li>Un personnage contrôlé ne peut pas exécuter ses compétences.</li>
+    <li>Certains effets sont exclusifs, d’autres cumulables.</li>
 </ul>
 
-<h2>7. Notes pour l'analyse</h2>
+<h2>7. Effets et statuts (PvP)</h2>
 <ul>
-    <li>Les personnages sont évalués <strong>dans ce cadre uniquement</strong>.</li>
-    <li>Aucune donnée externe n’est utilisée hors de cette base.</li>
-    <li>Les tier lists reflètent la performance en PvP automatique.</li>
-    <li>Les étoiles augmentent la <strong>fiabilité et la constance</strong> des mécaniques.</li>
+    <li><strong>Stun / Freeze / Pétrification</strong> : aucune action possible.</li>
+    <li><strong>Silence</strong> : bloque compétences cycliques et ultimes.</li>
+    <li><strong>Bind / Immobilisation</strong> : limite certaines actions.</li>
+    <li><strong>Knockback / Knockup</strong> : interrompt une action en cours.</li>
+    <li><strong>Banish / Dimensionnel</strong> :
+        <ul>
+            <li>retire la cible du champ de bataille,</li>
+            <li>suspend toute génération de ressource.</li>
+        </ul>
+    </li>
+    <li><strong>Dégâts sur la durée</strong> : poison, brûlure, saignement.</li>
+</ul>
+
+<h2>8. Tempo et fenêtres critiques</h2>
+<ul>
+    <li>Le combat est rythmé par des <strong>fenêtres d’ultimes</strong>.</li>
+    <li>Un contrôle bien placé peut :
+        <ul>
+            <li>annuler un ultime,</li>
+            <li>décaler une rotation complète.</li>
+        </ul>
+    </li>
+    <li>Les combats PvP se décident souvent sur le premier cycle d’ultimes.</li>
+</ul>
+
+<h2>9. Notes pour l'analyse</h2>
+<ul>
+    <li>Cette base décrit le <strong>fonctionnement du moteur</strong>, pas la méta.</li>
+    <li>Les évaluations de personnages s’appuient exclusivement sur ces règles.</li>
+    <li>Les étoiles améliorent la stabilité des mécaniques, non la logique du moteur.</li>
+    <li>Les différences de versions (CN / SEA / Global) concernent le contenu, pas ces règles fondamentales.</li>
 </ul>
 
 </body>
