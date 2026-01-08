@@ -8,6 +8,7 @@
         body { font-family: Arial, sans-serif; background: #f9f9f9; color: #222; margin: 0; padding: 20px; }
         h1 { border-bottom: 3px solid #333; padding-bottom: 10px; }
         h2 { margin-top: 30px; color: #444; }
+        h3 { margin-top: 20px; color: #555; }
         ul { list-style-type: disc; padding-left: 20px; }
         li { margin-bottom: 8px; }
         .box { background: #fff; padding: 15px; border-left: 5px solid #555; margin-bottom: 20px; }
@@ -25,9 +26,9 @@
 
 <div class="box">
     <p>
-        Cette page définit les règles fondamentales du moteur de combat de Saint Seiya EX.
-        Elle constitue la référence unique utilisée pour l’analyse des personnages,
-        des synergies et des tier lists en PvP automatique.
+        Cette page définit les règles fondamentales et exhaustives du moteur de combat de Saint Seiya EX.
+        Elle constitue la référence unique utilisée pour l’analyse des personnages, des synergies
+        et des tier lists en PvP automatique.
     </p>
 </div>
 
@@ -50,12 +51,12 @@
     <li>L’IA sélectionne les cibles selon :
         <ul>
             <li>la position (avant prioritaire),</li>
-            <li>l’état (vivant, banni, contrôlé),</li>
+            <li>l’état (vivant, contrôlé, banni),</li>
             <li>des règles propres à chaque compétence.</li>
         </ul>
     </li>
-    <li>Les compétences automatiques ne s’adaptent pas au contexte tactique.</li>
-    <li>La fiabilité d’un personnage dépend de la <strong>prévisibilité de son IA</strong>.</li>
+    <li>L’IA ne prend pas de décisions contextuelles avancées.</li>
+    <li>La valeur mécanique d’un personnage dépend fortement de la <strong>prévisibilité de ses déclenchements</strong>.</li>
 </ul>
 
 <h2>3. Types de compétences</h2>
@@ -64,14 +65,14 @@
     <li><strong>Compétences cycliques</strong> : s’activent automatiquement après un cooldown fixe.</li>
     <li><strong>Compétences passives</strong> :
         <ul>
-            <li>toujours actives ou conditionnelles,</li>
-            <li>peuvent modifier le moteur (statuts, priorités, déclenchements).</li>
+            <li>effets permanents ou conditionnels,</li>
+            <li>peuvent modifier le moteur (priorités, triggers, règles).</li>
         </ul>
     </li>
     <li><strong>Pouvoirs ultimes</strong> :
         <ul>
             <li>nécessitent une ressource pleine,</li>
-            <li>peuvent être annulés ou retardés par un contrôle.</li>
+            <li>sont interrompables ou annulables par contrôle.</li>
         </ul>
     </li>
 </ul>
@@ -83,72 +84,102 @@
             <li>attaques de base,</li>
             <li>dégâts infligés,</li>
             <li>dégâts subis,</li>
-            <li>certains passifs spécifiques.</li>
+            <li>passifs spécifiques.</li>
         </ul>
     </li>
-    <li>La vitesse de génération conditionne le <strong>rythme des ultimes</strong>.</li>
+    <li>La vitesse de génération conditionne le <strong>tempo des ultimes</strong>.</li>
 </ul>
 
 <h2>5. Mode PvP automatique</h2>
 <ul>
     <li>Les combats PvP standards sont <strong>entièrement automatisés</strong>.</li>
-    <li>Aucun contrôle manuel du timing n’est possible.</li>
-    <li>La valeur d’un personnage repose sur :
+    <li>Aucune intervention manuelle n’est possible.</li>
+    <li>Les mécaniques favorisées sont :
         <ul>
-            <li>la constance de ses triggers,</li>
-            <li>sa résistance aux contrôles,</li>
-            <li>l’impact passif sur le combat.</li>
+            <li>effets persistants,</li>
+            <li>passifs automatiques,</li>
+            <li>contrôles fiables.</li>
         </ul>
     </li>
 </ul>
 
-<h2>6. Résolution des effets</h2>
+<h2>6. Ordre de résolution moteur</h2>
 <ul>
-    <li>Ordre général :
+    <li>Ordre simplifié :
         <ol>
-            <li>vérification des passifs,</li>
-            <li>application des contrôles,</li>
-            <li>calcul des buffs/debuffs,</li>
-            <li>résolution des dégâts.</li>
+            <li>vérification de l’état (mort, banish),</li>
+            <li>application des contrôles hard,</li>
+            <li>blocages de compétences (silence, seal),</li>
+            <li>passifs conditionnels,</li>
+            <li>buffs / debuffs,</li>
+            <li>calcul des dégâts.</li>
         </ol>
     </li>
-    <li>Un personnage contrôlé ne peut pas exécuter ses compétences.</li>
-    <li>Certains effets sont exclusifs, d’autres cumulables.</li>
 </ul>
 
-<h2>7. Effets et statuts (PvP)</h2>
+<h2>7. Taxonomie des effets et statuts (PvP)</h2>
+
+<h3>7.1 Contrôles d’action (Hard CC)</h3>
 <ul>
-    <li><strong>Stun / Freeze / Pétrification</strong> : aucune action possible.</li>
+    <li><strong>Stun / Freeze / Pétrification</strong> : aucune action possible, interruption immédiate.</li>
+</ul>
+
+<h3>7.2 Altérations de compétences</h3>
+<ul>
     <li><strong>Silence</strong> : bloque compétences cycliques et ultimes.</li>
+    <li><strong>Seal Ultime</strong> : bloque uniquement l’ultime.</li>
+    <li><strong>Cooldown Lock</strong> : fige ou rallonge les délais.</li>
+</ul>
+
+<h3>7.3 Altérations de position / interruption</h3>
+<ul>
     <li><strong>Bind / Immobilisation</strong> : limite certaines actions.</li>
     <li><strong>Knockback / Knockup</strong> : interrompt une action en cours.</li>
-    <li><strong>Banish / Dimensionnel</strong> :
+</ul>
+
+<h3>7.4 Altérations d’état</h3>
+<ul>
+    <li><strong>Banish / Exil dimensionnel</strong> :
         <ul>
-            <li>retire la cible du champ de bataille,</li>
-            <li>suspend toute génération de ressource.</li>
+            <li>retire totalement la cible du combat,</li>
+            <li>suspend buffs, debuffs et ressources.</li>
         </ul>
     </li>
-    <li><strong>Dégâts sur la durée</strong> : poison, brûlure, saignement.</li>
+    <li><strong>Disappear</strong> : empêche le ciblage sans sortie complète.</li>
+</ul>
+
+<h3>7.5 Dégâts sur la durée</h3>
+<ul>
+    <li><strong>Poison</strong> : dégâts périodiques indépendants des actions.</li>
+    <li><strong>Brûlure</strong> : dégâts + parfois réduction de soins.</li>
+    <li><strong>Saignement</strong> : dégâts amplifiés si la cible agit.</li>
+</ul>
+
+<h3>7.6 Buffs et debuffs de statistiques</h3>
+<ul>
+    <li>Buffs : ATK ↑, DEF ↑, SPD ↑, Crit ↑, réduction dégâts.</li>
+    <li>Debuffs : ATK ↓, DEF ↓, SPD ↓, vulnérabilité ↑.</li>
+</ul>
+
+<h3>7.7 Effets spéciaux moteur</h3>
+<ul>
+    <li><strong>Résurrection</strong> : retour limité avec ressources réduites.</li>
+    <li><strong>Invulnérabilité</strong> : annule les dégâts, pas toujours les contrôles.</li>
+    <li><strong>Verrouillage de cible</strong> : force la priorité IA.</li>
 </ul>
 
 <h2>8. Tempo et fenêtres critiques</h2>
 <ul>
-    <li>Le combat est rythmé par des <strong>fenêtres d’ultimes</strong>.</li>
-    <li>Un contrôle bien placé peut :
-        <ul>
-            <li>annuler un ultime,</li>
-            <li>décaler une rotation complète.</li>
-        </ul>
-    </li>
-    <li>Les combats PvP se décident souvent sur le premier cycle d’ultimes.</li>
+    <li>Le combat est structuré par des <strong>cycles d’ultimes</strong>.</li>
+    <li>Un contrôle appliqué au bon moment peut annuler une rotation complète.</li>
+    <li>La majorité des combats PvP se décident sur le premier ou second cycle.</li>
 </ul>
 
-<h2>9. Notes pour l'analyse</h2>
+<h2>9. Notes pour l’analyse</h2>
 <ul>
-    <li>Cette base décrit le <strong>fonctionnement du moteur</strong>, pas la méta.</li>
-    <li>Les évaluations de personnages s’appuient exclusivement sur ces règles.</li>
-    <li>Les étoiles améliorent la stabilité des mécaniques, non la logique du moteur.</li>
-    <li>Les différences de versions (CN / SEA / Global) concernent le contenu, pas ces règles fondamentales.</li>
+    <li>Cette page décrit exclusivement le <strong>fonctionnement du moteur</strong>.</li>
+    <li>Aucune hypothèse méta n’est incluse.</li>
+    <li>Les différences CN / SEA / Global n’affectent pas ces règles fondamentales.</li>
 </ul>
 
 </body>
