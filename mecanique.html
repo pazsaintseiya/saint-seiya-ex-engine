@@ -181,6 +181,85 @@
     <li>Aucune hypothèse méta n’est incluse.</li>
     <li>Les différences CN / SEA / Global n’affectent pas ces règles fondamentales.</li>
 </ul>
+<h2>10. Table d’interactions des effets (PvP)</h2>
 
+<div class="box">
+    <p>
+        Cette section décrit les interactions mécaniques entre les différents effets et statuts
+        du moteur de combat. Elle s’applique exclusivement au PvP automatique.
+    </p>
+</div>
+
+<h3>10.1 Règles globales d’interaction</h3>
+<ul>
+    <li>Un personnage <strong>mort ou banni</strong> ne participe à aucune interaction.</li>
+    <li>Les <strong>contrôles hard</strong> ont priorité sur tous les autres effets.</li>
+    <li>Les contrôles ne se cumulent pas : un nouvel effet <strong>rafraîchit</strong> l’ancien.</li>
+    <li>Les <strong>dégâts sur la durée</strong> continuent sous contrôle.</li>
+    <li>Les buffs/debuffs sont recalculés à chaque action valide.</li>
+</ul>
+
+<h3>10.2 Hard CC et compétences</h3>
+<ul>
+    <li><strong>Stun / Freeze / Pétrification</strong> :
+        <ul>
+            <li>annulent une action en cours,</li>
+            <li>bloquent attaques, cycliques et ultimes,</li>
+            <li>suspendent la génération de ressources.</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>10.3 Silence et blocages</h3>
+<ul>
+    <li><strong>Silence</strong> :
+        <ul>
+            <li>bloque compétences cycliques et ultimes,</li>
+            <li>autorise l’attaque de base.</li>
+        </ul>
+    </li>
+    <li><strong>Seal Ultime</strong> :
+        <ul>
+            <li>bloque uniquement l’ultime,</li>
+            <li>n’affecte pas les cycliques.</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>10.4 Banish / Exil dimensionnel</h3>
+<ul>
+    <li>La cible est retirée du champ de bataille.</li>
+    <li>Buffs, debuffs et DoT sont <strong>suspendus</strong>.</li>
+    <li>Aucune génération de ressource n’a lieu.</li>
+    <li>Le retour se fait sans compensation de tempo.</li>
+</ul>
+
+<h3>10.5 Interruptions</h3>
+<ul>
+    <li><strong>Knockback / Knockup</strong> :
+        <ul>
+            <li>annulent une animation en cours,</li>
+            <li>peuvent annuler un ultime à délai.</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>10.6 Dégâts sur la durée</h3>
+<ul>
+    <li>Poison, brûlure et saignement :
+        <ul>
+            <li>continuent sous stun ou silence,</li>
+            <li>sont suspendus pendant un banish.</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>10.7 Buffs, debuffs et effets spéciaux</h3>
+<ul>
+    <li>Les buffs de même type sont rafraîchis ou écrasés.</li>
+    <li>Les debuffs opposés déclenchent un recalcul moteur.</li>
+    <li><strong>Résurrection</strong> : purge les contrôles.</li>
+    <li><strong>Invulnérabilité</strong> : bloque les dégâts, pas toujours les CC.</li>
+</ul>
 </body>
 </html>
